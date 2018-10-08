@@ -10,28 +10,39 @@ class Pin extends Component {
           super();
           this.state = { 
                 data: []
-                
              }
+             
+             this.getData = this.getData.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.getData();
     }
         
     getData(){
-       let data = fetch(`https://pixabay.com/api/?key=9821919-eb38392f2349a770434b8830a&q=yellow+flowers&image_type=photo`)
-            .then(res => {
-                res.json().then((resp) => {
-                    console.log('ver ' + resp.movies)
-                    this.setState({data: resp.movies})
-                })
-            })  
+        fetch(`https://pixabay.com/api/?key=9821919-eb38392f2349a770434b8830a&q=yellow+flowers&image_type=photo`)
+            .then((res) => res.json())
+            .then((data) => {
+               let obj= Object.entries(data.hits)
+               let images = obj.forEach(x => console.log(x[1].webformatURL))
+                this.setState({data:images})
+                
+            })
+            //.then(res => this.setState({ data: res.data.hits }))
+          .catch(err => console.log(err));
+              
     }
     
     
     render() {
+       
         return (
-          <div></div>
+          
+          <div>
+              {this.state.data}
+              
+          </div>
+          
         )
         }
     }

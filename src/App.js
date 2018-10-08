@@ -5,13 +5,15 @@ import Pin  from './Pin';
 import './App.css';
 
 
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Navbar/>
        <Buttons/>
-       <Pin/>
+       <Pin />
+       
       </div>
     );
   }
