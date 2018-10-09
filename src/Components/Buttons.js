@@ -1,6 +1,6 @@
-import './App.css';
+import '../App.css';
 import React, { Component } from 'react';
-import './App';
+import '../App';
 
  class Buttons extends Component {
     render(){
