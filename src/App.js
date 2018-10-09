@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Components/Navbar';
 import Buttons from './Components/Buttons';
 import ImgList from './Components/ImgList';
+import Modal from './Components/Modal';
 
 
 import './App.css';
@@ -16,9 +17,10 @@ class App extends Component {
 			imgs: []
 		};
 	}
+	
 
 	componentDidMount() {
-		fetch('https://api.unsplash.com/photos/?client_id=6d941d1ebb2255c24c2b6903e6bb9e25049f5ae6ffbe08b8c8d8eeeb063336b2')
+		fetch('https://api.unsplash.com/photos/?per_page=20&client_id=6d941d1ebb2255c24c2b6903e6bb9e25049f5ae6ffbe08b8c8d8eeeb063336b2')
 			.then(res => res.json())
 			.then(data => {
 				this.setState({ imgs: data });
@@ -36,7 +38,7 @@ class App extends Component {
        <div className="main-content">
 					<ImgList data={this.state.imgs} />
 				</div>
-       
+       <Modal/>
       </div>
     );
   }

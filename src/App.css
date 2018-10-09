@@ -1,5 +1,6 @@
-div img{
-  border-radius: 20px;
+img {
+  padding: 15px;
+  border-radius: 25px;
 }
 
 div{
@@ -140,6 +141,7 @@ li {
   list-style: none;
 }
 
+
 .img-list a {
   display: block;
   margin: auto;
@@ -160,6 +162,7 @@ li {
   width: 90%;
   max-width: 1025px;
   margin: auto;
+  margin-top: 40px;
 }
 
 @media (min-width: 0) and (max-width: 549px) {
