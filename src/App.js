@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navbar from './Components/Navbar';
 import Buttons from './Components/Buttons';
 import ImgList from './Components/ImgList';
-import Modal from './Components/Modal';
 
 
 import './App.css';
@@ -35,10 +34,14 @@ class App extends Component {
       <div className="App">
         <Navbar/>
        <Buttons/>
+			 
+			 
        <div className="main-content">
+			 	
 					<ImgList data={this.state.imgs} />
 				</div>
-       <Modal/>
+      
+			 
       </div>
     );
   }
