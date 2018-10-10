@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/silicon-valley-6/precache-manifest.7424392c32a7c93755968a4314e2f694.js"
+  "/silicon-valley-6/precache-manifest.b5e246065af08453c30a37edfa04d615.js"
 );
 
 workbox.clientsClaim();
